@@ -283,8 +283,6 @@ const highestPaidFrontendEmployee2 = employees
     const maxSalary = Math.max(
       ...filteredEmployees.map((emp) => emp.jobDesk[0].salary)
     ); // Cari gaji tertinggi
-    // console.log(filteredEmployees[0].jobDesk[0].salary);
-    // console.log(maxSalary);
     return item.jobDesk[0].salary === maxSalary; // Kembalikan karyawan dengan gaji tertinggi
   });
 

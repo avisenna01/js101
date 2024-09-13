@@ -97,11 +97,3 @@ const employees = [
     hobby: ["membaca"],
   },
 ];
-
-console.log("-----");
-console.log(
-  employees.find((item) => {
-    return item.nama === "Fatma";
-  })
-);
-console.log("-----");
