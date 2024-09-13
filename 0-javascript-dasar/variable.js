@@ -28,7 +28,9 @@ const age = 25;
 console.log("nama murid: ", studentName);
 console.log("umur: " + age);
 console.log("nama: ", studentName, "umur: ", age);
-console.log(hobby);
+// console.log(hobby);
+
+// ------------------------------
 
 const employee = [
   {
@@ -96,14 +98,10 @@ const employees = [
   },
 ];
 
-const mappingEmployee = employee.map((item) => {
-  //   return item.jobDesk.map((job) => job);
-  //   console.log("keryawan tuwir: ", data.nama, data.age > 25);
-  const newObject = {
-    nama: item.nama,
-    job: item.jobDesk.map((job) => job),
-    // job: item.jobDesk.map((job) => job.title),
-    // hobby: item.hobby.find((item) => item === "menulis"),
-  };
-  return newObject;
-});
+console.log("-----");
+console.log(
+  employees.find((item) => {
+    return item.nama === "Fatma";
+  })
+);
+console.log("-----");

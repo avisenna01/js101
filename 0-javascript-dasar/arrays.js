@@ -256,3 +256,36 @@ console.log(
     return item.hobby.length == 1;
   })
 );
+
+const employeesWithOneHobby = employees
+  .filter((item) => item.hobby.length === 1) // Filter karyawan yang hanya punya 1 hobi
+  .map((item) => item.nama); // Map untuk mendapatkan nama karyawan
+
+console.log("question 3:", employeesWithOneHobby);
+
+// ** Buatlah logic untuk nyari karyawan yang posisinya frontend dengan gaji tertinggi, lalu return nama karyawannya saja pake .filter, .some, .reduce, .find */
+const highestPaidFrontendEmployee1 = employees
+  .filter((item) => {
+    return item.jobDesk.some((job) => job.title === "frontend"); // Filter karyawan yang bekerja sebagai Frontend
+  })
+  .reduce((highest, current) => {
+    return current.jobDesk[0].salary > highest.jobDesk[0].salary
+      ? current
+      : highest; // Cari karyawan dengan gaji tertinggi
+  });
+
+console.log("question 4 (max salary):", highestPaidFrontendEmployee1.nama); // Return nama karyawan
+
+const highestPaidFrontendEmployee2 = employees
+  .filter((item) => item.jobDesk.some((job) => job.title === "frontend")) // Filter karyawan yang bekerja sebagai Frontend
+  .find((item, index, filteredEmployees) => {
+    // Menggunakan .find() pada hasil filter
+    const maxSalary = Math.max(
+      ...filteredEmployees.map((emp) => emp.jobDesk[0].salary)
+    ); // Cari gaji tertinggi
+    // console.log(filteredEmployees[0].jobDesk[0].salary);
+    // console.log(maxSalary);
+    return item.jobDesk[0].salary === maxSalary; // Kembalikan karyawan dengan gaji tertinggi
+  });
+
+console.log("question 4 (max salary):", highestPaidFrontendEmployee2.nama); // Return nama karyawan
