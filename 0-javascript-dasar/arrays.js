@@ -205,7 +205,7 @@ const employees = [
     id: 1,
     nama: "Dinda",
     age: 26,
-    jobDesk: [{ title: "frontend", salary: 2000000 }],
+    jobDesk: [{ title: "frontend", salary: 3000000 }],
     hobby: ["membaca", "menulis"],
   },
   {
@@ -287,3 +287,24 @@ const highestPaidFrontendEmployee2 = employees
   });
 
 console.log("question 4 (max salary):", highestPaidFrontendEmployee2.nama); // Return nama karyawan
+
+const findHighestFrontend = employees
+  .filter((item) => item.jobDesk.some((job) => job.title == "frontend"))
+  .reduce((highest, current) => {
+    const currentSalary = current.jobDesk.find(
+      (job) => job.title == "frontend"
+    ).salary;
+    const highestSalary = highest.jobDesk.find(
+      (job) => job.title == "frontend"
+    ).salary;
+
+    console.log(currentSalary);
+    console.log(highestSalary);
+
+    if (currentSalary > highestSalary) {
+      return current;
+    } else {
+      return highest;
+    }
+  });
+console.log("Highest salary name: ", findHighestFrontend.nama);
