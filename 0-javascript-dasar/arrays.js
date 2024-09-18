@@ -82,6 +82,11 @@ console.log(
     currency: "IDR",
   })
 );
+console.log(
+  new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(
+    price[3]
+  )
+);
 
 // .reduce : method array buat mengakumulasi/totalin nilai dalam array ke dalam satu hasil akhir
 const totalPrice = price.reduce((accumulator, currentvalue) => {

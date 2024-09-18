@@ -22,3 +22,13 @@ inputName.question("Input your name: ", (nama) => {
     inputName.close();
   });
 });
+
+/** modul nodeJS yang sering dipakai di javascript
+ * Express: untuk membuat server/backend pakai js
+ * body-parser: untuk konversi dari request body ke json
+ * JWT: JSON web token, untuk bikin token
+ * nodemailer: modul untuk mengirimkan email
+ * dotenv: modul untuk akses file dengan format .env
+ * socket.io: modul untuk membuat chat realtime
+ * multer: modul untuk upload file
+ */
