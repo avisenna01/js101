@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nama": "Danu",
+    "age": 25,
+    "jobDesk": [{ "title": "frontend", "salary": 12000000 }],
+    "hobby": ["membaca", "menulis"]
+  },
+  {
+    "id": 2,
+    "nama": "Dinda",
+    "age": 26,
+    "jobDesk": [{ "title": "frontend", "salary": 2000000 }],
+    "hobby": ["membaca", "menulis"]
+  },
+  {
+    "id": 3,
+    "nama": "Fatma",
+    "age": 27,
+    "jobDesk": [{ "title": "backend", "salary": 3000000 }],
+    "hobby": ["membaca"]
+  },
+  {
+    "id": 4,
+    "nama": "Akmal",
+    "age": 26,
+    "jobDesk": [{ "title": "backend", "salary": 4000000 }],
+    "hobby": ["membaca"]
+  },
+  {
+    "id": 5,
+    "nama": "Abi",
+    "age": 27,
+    "jobDesk": [{ "title": "frontend", "salary": 8000000 }],
+    "hobby": ["membaca"]
+  },
+  {
+    "id": 6,
+    "nama": "El Gibrsky",
+    "age": 39,
+    "jobDesk": [{ "title": "wapres", "salary": 199999999999 }],
+    "hobby": ["tawuran"]
+  },
+  {
+    "id": 6,
+    "nama": "El Gibrsky",
+    "age": 39,
+    "jobDesk": [{ "title": "wapres", "salary": 199999999999 }],
+    "hobby": ["tawuran"]
+  },
+  {
+    "id": 6,
+    "nama": "El Gibrsky",
+    "age": 39,
+    "jobDesk": [{ "title": "wapres", "salary": 199999999999 }],
+    "hobby": ["tawuran"]
+  }
+]
