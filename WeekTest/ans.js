@@ -56,33 +56,65 @@ console.log("Type electric cars: ", electric);
 
 // 5. buat fungsi yang membaca data dari file JSON carProducts.json secara ASYNCHRONOUS, lalu urutkan mobil berdasarkan harga dari tinggi ke rendah, tampilin hasilnya ke file JSON yang sama
 
-// read the file
-fs.readFile("./carProducts.json", "utf8", (error, data) => {
-  if (error) {
-    console.log("error explanation: ", error);
-    return;
+// CARA PERTAMA
+// // read the file
+// fs.readFile("./carProducts.json", "utf8", (error, data) => {
+//   if (error) {
+//     console.log("error explanation: ", error);
+//     return;
+//   }
+//   const data2 = JSON.parse(data); // parse to json
+//   data2.sort((a, b) => b.price - a.price); // b - a for reverse sort
+
+//   // print to terminal sorted data
+//   console.log(data2);
+
+//   // write to file
+//   fs.writeFile(
+//     // "./carProductsUpdated.json",
+//     "./carProducts.json",
+//     JSON.stringify(data2),
+//     "utf8",
+//     (error) => {
+//       if (error) {
+//         console.log(error);
+//         return;
+//       }
+//       console.log("File berhasil disimpan");
+//     }
+//   );
+// });
+
+// -------------------------------------------------------------- //
+
+// CARA KEDUA
+const fsp = require("fs").promises; // Using fs.promises for async/await
+
+async function updateCarProducts() {
+  try {
+    // Read the file
+    const data = await fsp.readFile("./carProducts.json", "utf8");
+
+    // Parse the JSON data
+    const data2 = JSON.parse(data);
+
+    // Sort the data based on price in descending order
+    data2.sort((a, b) => b.price - a.price);
+
+    // Print sorted data to terminal
+    console.log(data2);
+
+    // Write the updated data back to the file
+    await fsp.writeFile("./carProducts.json", JSON.stringify(data2), "utf8");
+
+    console.log("File berhasil disimpan");
+  } catch (error) {
+    console.log("Error explanation: ", error);
   }
-  const data2 = JSON.parse(data); // parse to json
-  data2.sort((a, b) => b.price - a.price); // b - a for reverse sort
+}
 
-  // print to terminal sorted data
-  console.log(data2);
-
-  // write to file
-  fs.writeFile(
-    // "./carProductsUpdated.json",
-    "./carProducts.json",
-    JSON.stringify(data2),
-    "utf8",
-    (error) => {
-      if (error) {
-        console.log(error);
-        return;
-      }
-      console.log("File berhasil disimpan");
-    }
-  );
-});
+// Call the async function
+updateCarProducts();
 
 // 6. Buat fungsi untuk menambahkan mobil baru dari carProducts.json kedalam file "addNewCarProducts.json"
 // still can use mydata1 as the clean data (format in json). So I dont need to build a function to read json file
@@ -113,3 +145,77 @@ let addedCar = {
 };
 
 addNewCar(mydata1, addedCar, filePathDestination);
+
+// 7. buat fungsi ASYNCHRONOUS yang mengambil produk mobil dengan harga tertinggi dan terendah, lalu hitung selisih harganya.
+function getHighestPrice(mydata1) {
+  return new Promise((resolve, reject) => {
+    resolve(Math.max(...carPrice));
+  });
+}
+function getLowestPrice(mydata1) {
+  return new Promise((resolve, reject) => {
+    resolve(Math.min(...carPrice));
+  });
+}
+
+const getDataInParalel = () => {
+  return Promise.all([getHighestPrice(), getLowestPrice()]);
+};
+
+async function selisihHarga() {
+  try {
+    const res = await getDataInParalel();
+    console.log("Selisih harga: ", res[0] - res[1]);
+  } catch (error) {
+    console.log("error: ", error);
+  }
+}
+
+selisihHarga();
+
+// 8. buat fungsi yang mencari mobil dengan varian warna terbanyak.
+// kalau pakai reduce hanya keluar 1 result saja
+const totalVariant = mydata1.reduce((highest, current) => {
+  return current.variant.length > highest.variant.length ? current : highest;
+});
+
+let max = totalVariant.variant.length;
+console.log("max variant: ", totalVariant.variant.length);
+
+const totalVariant2 = mydata1.filter((car) => {
+  return car.variant.length == max;
+});
+
+console.log("total variant: ", totalVariant2);
+
+// 9. buat fungsi untuk mencari mobil yang tidak preorder
+const notPreorderCar = mydata1.filter((car) => {
+  return car.isPreorder == false;
+});
+console.log("Total for not preorder cars: ", notPreorderCar.length);
+console.log("Not preorder cars: ", notPreorderCar);
+
+// 10. buat looping untuk menampilkan SEGITIGA SAMA KAKI
+// const triangle = (n) => {
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= i; j++) {
+//       process.stdout.write("*");
+//     }
+//     console.log();
+//   }
+// };
+
+const isoscelesTriangle = (height) => {
+  for (let i = 1; i <= height; i++) {
+    // Print spasi di sebelah kiri bintang
+    let spasi = " ".repeat(height - i);
+
+    // Print bintang
+    let bintang = "*".repeat(2 * i - 1);
+
+    // Gabungkan spasi dan bintang, lalu cetak hasilnya
+    console.log(spasi + bintang);
+  }
+};
+
+isoscelesTriangle(5);
