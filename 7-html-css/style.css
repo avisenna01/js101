@@ -1,0 +1,205 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+nav {
+  padding-inline: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: yellow;
+  /* margin-inline: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  /* untuk navbar supaya ketika di scroll tetap ngikut, top: 0 juga diperlukan */
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+nav a:hover {
+  color: white;
+}
+
+.style-h1 {
+  color: green;
+}
+
+.style-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff8a78;
+  padding: 10px;
+  margin: 16px;
+  border: 1px solid black;
+  /* border-style: solid;
+  border-width: 1px;
+  border-color: black; */
+  /* box-shadow untuk kasih bayangan */
+  box-shadow: 5px 5px 15px gray;
+}
+
+.style-img {
+  width: 200px;
+  height: auto;
+  object-fit: fill;
+  object-position: center;
+  aspect-ratio: 16/9;
+}
+
+.style-table {
+  border-collapse: collapse;
+}
+
+.style-table th {
+  border: 1px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.style table td {
+  border: 1px solid black;
+}
+
+.style-form {
+  background-color: aquamarine;
+  padding: 16px;
+  /* arrangin the items using grid */
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="text"],
+input[type="date"] {
+  grid-column: 1 / span 2;
+}
+
+label[for="email"] {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* #email { */
+input[type="email"] {
+  grid-column: 1;
+}
+
+label[for="password"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+input[type="password"] {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.gender {
+  display: flex;
+  gap: 8px;
+  grid-column: 1 / span 2;
+  align-items: center;
+}
+
+label[for="file"],
+input[type="file"] {
+  grid-column: 1;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  grid-column: 1;
+  gap: 8px;
+}
+
+input[type="submit"] {
+  grid-column: 1 / span 2;
+}
+
+.style-form input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.style-form input:focus {
+  border: 2px solid red;
+  outline: none;
+}
+
+footer {
+  background-color: rgb(45, 45, 45);
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.product {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+}
+
+.card {
+  border: 1px solid black;
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.card img {
+  width: 300px;
+  height: auto;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 16px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-price {
+  font-weight: 600;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+}

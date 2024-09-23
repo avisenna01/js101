@@ -1,0 +1,160 @@
+<!-- HTML : markup language to build the structure of a website (tag-tag) -->
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> : indicate that this file is a HTML file -->
+
+<!-- <HTML> pembungkus kerangka website -->
+<html>
+  <!-- berisi informasi terkait halaman website -->
+  <head>
+    <!-- <title> untul judul halaman pada tab browser -->
+    <title>the website</title>
+    <!-- tag meta untuk memberikan informasi terkait website, yang nantinya akan berguna bagi seearch engine atau browser -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <style>
+        body {
+            background-color: cadetblue;
+        }
+    </style> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background-color: cadetblue">
+    <nav>
+      <a href="https://google.com" target="_blank">Google</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://instagram.com">Instagram</a>
+    </nav>
+    <h1 class="style-h1">Header h1</h1>
+    <h2>Header h2</h2>
+    <h3>Header h3</h3>
+    <h4>Header h4</h4>
+    <h5>Header h5</h5>
+    <h6>Header h6</h6>
+    <div class="style-div">
+      <p>tag p: paragraf <b>ini bold</b></p>
+      <b>ini tulisan bold</b>
+      <i>ini tulisan miring</i>
+      <u>ini untuk tulisan underline</u>
+      <span>ini teks span</span>
+      <div>ini div <span>sedangkan ini span</span></div>
+    </div>
+    <hr />
+    <img
+      src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338507_1280.png"
+      alt="logo facebook"
+      class="style-img"
+    />
+    <br />
+    <ul>
+      <li>list 1</li>
+      <li>list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+    </ul>
+    <ol>
+      <li>list 1</li>
+      <li>list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+    </ol>
+    <table class="style-table">
+      <th>table header 1</th>
+      <th>table header 2</th>
+      <th>table header 3</th>
+      <tr>
+        <td>data row 1</td>
+        <td>data row 1</td>
+        <td>data row 1</td>
+      </tr>
+      <tr>
+        <td>data row 2</td>
+        <td>data row 2</td>
+        <td>data row 2</td>
+      </tr>
+      <tr>
+        <td>data row 3</td>
+        <td>data row 3</td>
+        <td>data row 3</td>
+      </tr>
+    </table>
+
+    <form class="style-form" action="">
+      <label for="name">Name</label>
+      <input id="name" type="text" />
+      <label for="email">Email</label>
+      <input id="email" type="email" />
+      <label for="password">Password</label>
+      <input id="password" type="password" />
+      <label for="date">tanggal</label>
+      <input id="date" type="date" />
+      <div class="gender">
+        <span>Jenis Kelamin : </span>
+        <input id="man" type="radio" />
+        <label for="man">pria</label>
+        <input id="woman" type="radio" />
+        <label for="woman">wanita</label>
+      </div>
+      <label for="deskripsi">Deskripsi</label>
+      <textarea id="deskripsi">Deskripsikan tentang anda</textarea>
+      <label for="color">warna kulit</label>
+      <input id="color" type="color" />
+      <label for="range">Tingkat penguasaan bidang IT</label>
+      <input id="range" type="range" />
+      <label for="file">Upload foto</label>
+      <input id="file" type="file" />
+      <div class="agreement">
+        <input id="agreement" type="checkbox" />
+        <label for="agreement"
+          >Saya menyetujui syarat dan ketentuan berlaku</label
+        >
+      </div>
+      <input type="submit" />
+    </form>
+    <div class="container">
+      <h2>PRODUCTS</h2>
+      <div class="product">
+        <div class="card">
+          <img src="https://dummyimage.com/600x400/000/fff" alt="dummy image" />
+          <div class="card-content">
+            <span class="card-title">Title product</span>
+            <span class="card-price">harga : 12000</span>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://dummyimage.com/600x400/000/fff" alt="dummy image" />
+          <div class="card-content">
+            <span class="card-title">Title product</span>
+            <span class="card-price">harga : 12000</span>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://dummyimage.com/600x400/000/fff" alt="dummy image" />
+          <div class="card-content">
+            <span class="card-title">Title product</span>
+            <span class="card-price">harga : 12000</span>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://dummyimage.com/600x400/000/fff" alt="dummy image" />
+          <div class="card-content">
+            <span class="card-title">Title product</span>
+            <span class="card-price">harga : 12000</span>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://dummyimage.com/600x400/000/fff" alt="dummy image" />
+          <div class="card-content">
+            <span class="card-title">Title product</span>
+            <span class="card-price">harga : 12000</span>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>copyright 2024 | king</footer>
+</html>
