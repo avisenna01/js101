@@ -123,9 +123,19 @@ nav button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   border: 1px solid red;
-  text-align: center;
+  text-align: left;
+  padding: 25px;
+}
+
+/* .section-2-content-2 h1,
+p {
+  text-align: left;
+} */
+
+.section-2-content-2 p {
+  font-size: 20px;
 }
 
 footer {
