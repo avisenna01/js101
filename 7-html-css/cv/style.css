@@ -5,12 +5,14 @@ html {
 body {
   margin: 0;
   /* padding: 10px; */
+  font-family: "Open Sans";
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #cccccc;
+  /* background-color: #f7e0c1; */
+  background-color: #777;
   /* background: rgb(255, 250, 221); */
   /* background: linear-gradient(
     90deg,
@@ -18,29 +20,38 @@ body {
     rgba(168, 240, 255, 1) 100%,
     rgba(183, 255, 217, 1) 100%
   ); */
+  /* background: linear-gradient(
+    360deg,
+    rgba(239, 239, 239, 1) 0%,
+    rgba(197, 197, 197, 1) 100%
+  ); */
   padding: 15px;
+  padding-right: 30px;
 }
 
 .header-1 {
   display: grid;
   grid-auto-columns: auto auto;
-  grid-template-rows: 80px;
+  grid-template-rows: 75px;
   gap: 8px;
   /* height: 100%; */
 }
 
 .header-1 img {
+  /* display: none; */
   grid-column: 1;
-  height: 150px;
+  height: 160px;
   grid-row: 1 / span 2;
   border-radius: 5%;
+  margin-right: 10px;
+  z-index: 50;
 }
 
 .header-1 h2,
 .header-1 p {
   grid-column: 2;
   margin: 0;
-  color: white;
+  color: black;
   /* align-self: center; */
 }
 
@@ -52,6 +63,7 @@ body {
 
 .header-1 p {
   /* align-self: start; */
+  font-size: 18px;
 }
 
 .header-2 {
@@ -74,9 +86,90 @@ hr {
   grid-auto-columns: auto auto;
 }
 
+.submain-1 {
+  display: grid;
+  grid-column: 1;
+  grid-template-columns: 310px;
+  text-align: center;
+  margin-top: -90px;
+}
+
+.personality,
+.hobby {
+  /* background-color: #cccccc; */
+  background-color: #f7e0c1;
+  margin: 20px;
+  padding: 8px;
+  color: black;
+  /* padding: 15px; */
+}
+
+.personality h3,
+.hobby h3 {
+  font-size: 25px;
+  margin-inline: 5px;
+}
+
+.personality img {
+  height: auto;
+  width: 70%;
+  margin-top: 50px;
+}
+
+.personality p {
+  display: flex;
+  justify-content: left;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+}
+
+/* .linkedin {
+  font-size: 14px;
+} */
+
+.github,
+.linkedin {
+  /* margin-left: 10px; */
+  font-size: 14px;
+  /* padding-left: 10px; */
+}
+
+.github {
+  width: 100%;
+}
+
+.hobby {
+  padding: 25px;
+  text-align: left;
+}
+
+.submain-2 {
+  display: grid;
+  grid-column: 2;
+}
+
 section {
   padding: 20px;
   /* padding-left: 15%; */
+}
+
+section h2 {
+  background-color: #f7e0c1;
+  padding: 12px;
+  text-align: center;
+}
+
+section h4 {
+  font-weight: bold;
+  color: black;
+  background-color: #e1e1e1;
+  padding: 8px;
+}
+
+li p {
+  color: #777;
 }
 
 footer {
