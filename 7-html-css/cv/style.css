@@ -114,6 +114,7 @@ hr {
   height: auto;
   width: 70%;
   margin-top: 50px;
+  border: 5px solid white;
 }
 
 .personality p {
