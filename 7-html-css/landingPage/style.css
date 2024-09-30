@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "GT Alpina";
+  src: url("GT-Alpina-Typewriter-Thin-Trial.otf") format("opentype");
+}
+
+h5,
+p {
+  color: #6d653c;
+}
+
+td {
+  color: #6d653c;
+  margin: 0 15px;
+}
+
+li::before {
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+
+.section1-title,
+.section2-title,
+.section3-desc {
+  font-family: "GT Alpina";
+}
+
+/* .section1-p {
+  font-family: "Larsseit";
+} */
+
+.front-window-image {
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 50px;
+}
+
+.card img {
+  height: 320px;
+}
