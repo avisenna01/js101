@@ -23,7 +23,8 @@ li::before {
 
 .section1-title,
 .section2-title,
-.section3-desc {
+.section3-desc,
+.craft-standout {
   font-family: "GT Alpina";
 }
 
@@ -31,12 +32,17 @@ li::before {
   font-family: "Larsseit";
 } */
 
+.exclamation-mark {
+  color: #6d653c;
+  background-color: #6d653c;
+}
+
 .front-window-image {
   transform: translate(-50%, -50%);
 }
 
 .card {
-  background-color: white;
+  background-color: #fafaf3;
   border-radius: 15px;
   padding: 50px;
 }
